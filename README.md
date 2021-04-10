@@ -9,21 +9,22 @@ Secondary Onboard Computer for SETECLab's Ground Station Terminal
 
 * This repository was created to develop an SOBC for the SETECLab's custom GST. 
 
-### MSP432 information
+### Blue Pill development board information
 
-* [Datasheet](https://www.ti.com/lit/ds/slas826h/slas826h.pdf?ts=1602367336655&ref_url=https%253A%252F%252Fwww.ti.com%252Ftool%252FMSP-EXP432P401R)
-* [Development board: MSP432 LaunchPad](http://www.ti.com/tool/MSP-EXP432P401R)
-* [Programmer when integrated in the PCB: OLIMEX MSPBSL](https://www.ti.com/tool/MSPBSL) 
+* [Pinout](http://reblag.dk/wordpress/wp-content/uploads/2016/07/The-Generic-STM32F103-Pinout-Diagram.pdf)
+* [Reference image](https://stm32-base.org/assets/img/boards/STM32F103C8T6_Blue_Pill-1.jpg)
+* [Schematic1](https://stm32-base.org/assets/pdf/boards/original-schematic-STM32F103C8T6-Blue_Pill.pdf)
+* [Schematic2](http://reblag.dk/wordpress/wp-content/uploads/2016/07/STM32F103C8T620Schematic.pdf)
+
+### STM32F103C8T6 information
+
+* [Web page](https://www.st.com/en/microcontrollers-microprocessors/stm32f103c8.html)
+* [Datasheet](https://www.st.com/resource/en/datasheet/stm32f103c8.pdf)
 
 ### How do I get set up? ###
 
-* Remove **5V jumper** (**J101** jumper bench) on [MSP432 LaunchPad](http://www.ti.com/tool/MSP-EXP432P401R) (Important! Otherwise, two 5V sources will feed the 5V power line on the PCB)
-* Connect [MSP432 LaunchPad](http://www.ti.com/tool/MSP-EXP432P401R) to PC via USB
-* Compile with [Code Composer Studio](http://www.ti.com/tool/CCSTUDIO) (Build Project) and Run-->Debug
-
-
-## Known issues
-* Current tests have shown that the **SPI frequency** is somehow band-pass limited: The frequency must be above 70 kHz and below 3 MHz for a proper functioning SPI communication between MSP432 and PIC16. Though, this phenomen might be due to the fact that for testing the SPI communication, a voltage level shifter consisting of _74LS245N_ and _CD4050BE_ has been used which might be a limiting factor. However, using **400 kHz SPI clock speed** is a reasonable and sufficient fast frequency.
+* Install Git
+* Install Arduino IDE
 
 ### Contribution guidelines ###
 
